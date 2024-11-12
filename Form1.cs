@@ -73,5 +73,11 @@ namespace OOP_laba6
                 strings = s.Split('\n');
             }
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            Form3 aForm = new Form3();
+            aForm.ShowDialog();
+        }
     }
 }
