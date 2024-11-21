@@ -34,6 +34,7 @@
             progressBar1 = new ProgressBar();
             button1 = new Button();
             button2 = new Button();
+            backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             SuspendLayout();
             // 
             // textBox1
@@ -77,6 +78,7 @@
             button1.TabIndex = 4;
             button1.Text = "Start";
             button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
             // button2
             // 
@@ -86,6 +88,15 @@
             button2.TabIndex = 5;
             button2.Text = "Cancel";
             button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
+            // 
+            // backgroundWorker1
+            // 
+            backgroundWorker1.WorkerReportsProgress = true;
+            backgroundWorker1.WorkerSupportsCancellation = true;
+            backgroundWorker1.DoWork += backgroundWorker1_DoWork;
+            backgroundWorker1.ProgressChanged += backgroundWorker1_ProgressChanged;
+            backgroundWorker1.RunWorkerCompleted += backgroundWorker1_RunWorkerCompleted;
             // 
             // Form3
             // 
@@ -112,5 +123,6 @@
         private ProgressBar progressBar1;
         private Button button1;
         private Button button2;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
     }
 }
